@@ -12,7 +12,6 @@ const App = () => {
   return (
     <div>
       <TotalExpense expenseList={expense} />
-
       <ExpenseForm onaddExpense={addExpense} />
       <ExpenseList expenses={expense} />
     </div>
