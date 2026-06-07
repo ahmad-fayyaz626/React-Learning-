@@ -10,12 +10,11 @@ const Card = ({
   offers,
 }) => {
   return (
-    <div className="flex gap-12 bg-white p-5 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 w-screen">
-      
+    <div className="flex gap-10 bg-white p-5 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 w-screen">
       {/* Image Section */}
-      <div className="flex-shrink-0 w-44 h-44 bg-gray-50 rounded-xl overflow-hidden border border-gray-100 flex items-center justify-center">
+      <div className="shrink-0 w-44 h-44 bg-gray-50 rounded-xl overflow-hidden border border-gray-100 flex items-center justify-center">
         <img
-          className="w-full h-full object-contain p-2"
+          className="w-full h-full border-2 border-gray-300 object-contain p-2"
           src={image}
           alt={title}
         />
@@ -23,7 +22,6 @@ const Card = ({
 
       {/* Content Section */}
       <div className="flex flex-col gap-3 flex-1 min-w-0">
-
         {/* Title */}
         <h1 className="text-gray-900 font-semibold text-base leading-snug line-clamp-2">
           {title}
@@ -44,7 +42,7 @@ const Card = ({
               key={index}
               className="flex items-start gap-2 text-gray-600 text-sm"
             >
-              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
               {detail}
             </li>
           ))}
@@ -63,10 +61,13 @@ const Card = ({
         {/* Pricing */}
         <div className="flex items-center gap-2 mt-1">
           <span className="text-xl font-bold text-gray-900">₹{price}</span>
-          <span className="text-sm text-gray-400 line-through">₹{originalPrice}</span>
-          <span className="text-sm font-semibold text-green-600">{discount}% off</span>
+          <span className="text-sm text-gray-400 line-through">
+            ₹{originalPrice}
+          </span>
+          <span className="text-sm font-semibold text-green-600">
+            {discount}% off
+          </span>
         </div>
-
       </div>
     </div>
   );
