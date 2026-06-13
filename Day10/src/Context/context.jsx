@@ -1,7 +1,6 @@
 import { createContext, useContext } from "react";
 import api from "../config/api";
 import { useEffect } from "react";
-
 import { useState } from "react";
 
 const NewsContext = createContext();
